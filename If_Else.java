@@ -1,3 +1,4 @@
+import javax.imageio.ImageTranscoder;
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
@@ -89,31 +90,75 @@ public class If_Else {
 //            System.out.println(" không phải năm nhuần");
 //        }
         //BÀI TẬP 4
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Mời bạn nhập vào năm: ");
+//        int n=sc.nextInt();
+//        System.out.println("Mời nhập vào tháng bạn muốn kiểm tra: ");
+//        int t=sc.nextInt();
+//        if ((t==1)||(t==3)||(t==5)||(t==7)||(t==8)||(t==10)||(t==12)){
+//            System.out.print("Tháng "+t);
+//            System.out.print("năm "+n);
+//            System.out.println(" có 31 ngày");
+//        }
+//        else if (t==2){
+//            if ((n%4==0&&(n%100)!=0)||n%400==0){
+//                System.out.print("Tháng 2 năm " +n);
+//                System.out.println(" có 29 ngày");
+//            }
+//            else {
+//                System.out.print("Tháng 2 năm "+n);
+//                System.out.println(" có 28 ngày");
+//            }
+//        }
+//        else {
+//            System.out.print("Tháng "+t);
+//            System.out.print(" năm "+n);
+//            System.out.println(" có 30 ngày");
+//        }
+        //BÀI TẬP 5
+//        Scanner sc=new Scanner(System.in);
+//        System.out.println("Nhập vào a: ");
+//        double a= sc.nextDouble();
+//        System.out.println("Nhập vào b: ");
+//        double b= sc.nextDouble();
+//        System.out.println("Nhập vào c: ");
+//        double c=sc.nextDouble();
+//        double del= Math.pow(b,2)-4*a*c;
+//        if (del>0){
+//            System.out.println("Phương trình có 2 nghiệm phân biệt: ");
+//            System.out.println("X1 = " +(((-b+Math.sqrt(del))/(2*a))));
+//            System.out.println("X2 = " +(((-b-Math.sqrt(del))/(2*a))));
+//        } else if (del==0) {
+//            System.out.print("Phương trình có nghiệm kép ");
+//            System.out.println("x1 = x2= " +(-b/(2*a)));
+//        }
+//        else {
+//            System.out.println("Phương trình vô nghiệm");
+//        }
         Scanner sc=new Scanner(System.in);
-        System.out.println("Mời bạn nhập vào năm: ");
-        int n=sc.nextInt();
-        System.out.println("Mời nhập vào tháng bạn muốn kiểm tra: ");
+        System.out.println("Nhập vào tháng bạn muốn kiểm tra: ");
         int t=sc.nextInt();
-        if ((t==1)||(t==3)||(t==5)||(t==7)||(t==8)||(t==10)||(t==12)){
+        if(t>=1&&t<=3){
             System.out.print("Tháng "+t);
-            System.out.print("năm "+n);
-            System.out.println(" có 31 ngày");
+            System.out.println(" thuộc quý 1 của năm");
         }
-        else if (t==2){
-            if ((n%4==0&&(n&100)!=0)||n%400==0){
-                System.out.print("Tháng 2 năm " +n);
-                System.out.println(" có 29 ngày");
-            }
-            else {
-                System.out.print("Tháng 2 năm "+n);
-                System.out.println(" có 28 ngày");
-            }
+        else if (t>=4&&t<=6){
+            System.out.print("Tháng "+t);
+            System.out.println(" thuộc quý 2 của năm");
+        }
+        else if (t>=7&&t<=9){
+            System.out.print("Tháng "+t);
+            System.out.println(" thuộc quý 3 của năm");
+        }
+        else if (t>=10&&t<=12){
+            System.out.print("Tháng "+t);
+            System.out.println(" thuộc quý 4 của năm");
         }
         else {
-            System.out.print("Tháng "+t);
-            System.out.print(" năm "+n);
-            System.out.println(" có 30 ngày");
+            System.out.print("Số "+t);
+            System.out.println(" sai định dạng hoặc không nằm trong 12 tháng vui lòng nhập lại");
         }
+
 
     }
 }
